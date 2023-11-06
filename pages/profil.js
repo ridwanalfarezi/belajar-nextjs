@@ -23,11 +23,11 @@ export default Profil;
 
 export const getStaticProps = async () => {
   const res = await fetch("https://jsonplaceholder.typicode.com/albums");
-  const data = await res.json();
+  const albums = await res.json();
 
   return {
     props: {
-      albums: data,
+      albums,
     },
   };
 };
